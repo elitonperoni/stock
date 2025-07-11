@@ -39,7 +39,7 @@ jobs:
         port: 22
         script: |
           # Pare o container atual
-          cd /var/docker/stock
+          cd /var/docker/stocks
           docker compose down
 
           # Remova a imagem antiga
