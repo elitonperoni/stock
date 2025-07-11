@@ -1,4 +1,4 @@
-name: Relatórios - TESTE
+name: WEB STOCKS - FE
 
 on:
   workflow_dispatch:   
