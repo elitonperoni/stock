@@ -40,10 +40,10 @@ jobs:
         script: |
           # Pare o container atual
           cd /var/docker/stock
-          docker-compose down
+          docker compose down
 
           # Remova a imagem antiga
           docker rmi ghcr.io/elitonperoni/stock/stock:latest || true                  
           
           # Suba o container com a nova imagem
-          docker-compose up -d
+          docker compose up -d
