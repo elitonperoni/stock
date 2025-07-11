@@ -1,20 +1,10 @@
-# Etapa de build
-FROM node:20-slim AS build
+FROM node:lts-alpine as build
 
 WORKDIR /app
 COPY package*.json ./
-
 RUN npm ci
 COPY . .
 RUN npm run build
 
-# Etapa de produção
-FROM node:20-slim AS prod
-
-WORKDIR /app
-
-COPY --from=build /app ./
-
 EXPOSE 3000
-
 CMD ["npm", "start"]
